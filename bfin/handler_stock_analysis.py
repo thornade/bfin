@@ -38,7 +38,7 @@ def get_ticker_name_from_symbol(symbol):
 def graph_isin_with_bourso(isin,last=-1,start="2022-01-01"):
     length=(int(datetime.datetime.now().strftime("%Y")) - int(start.split("-")[0])) * 365
     df=hbourso.get_history(symbol=hbourso.get_bourso_symbol_from_localdb(isin),length=length)
-    return graph_ticker(t=None,last=last,start=start,df_values=df,name=hbourso.get_isin_name_from_localdb(isin))
+    return graph_ticker(last=last,start=start,df_values=df,name=hbourso.get_isin_name_from_localdb(isin))
 
 
 # Graph a value with price channel
