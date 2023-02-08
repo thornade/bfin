@@ -58,10 +58,10 @@ def graph_ticker(last=-1,start="2022-01-01",df_values=None,name=""):
     c = (Line(init_opts=opts.InitOpts(width="1500px",height="500px",theme=ThemeType.DARK))
         .add_xaxis(df["Date"].apply(lambda x: str(x).split(" ")[0]).to_list())
         .add_yaxis("Close", df["Close"].to_list(), is_smooth=True,linestyle_opts=opts.LineStyleOpts(color="white",width=2.5))
-        .add_yaxis("PC_low", df["PC_low"].to_list(), is_smooth=True,linestyle_opts=opts.LineStyleOpts(color="red"))
-        .add_yaxis("PC_high", df["PC_high"].to_list(), is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="green_light"))
-        .add_yaxis("B_low", df["B_low"].to_list(), is_smooth=True,linestyle_opts=opts.LineStyleOpts(color="red"))
-        .add_yaxis("B_high", df["B_high"].to_list(), is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="green"))
+        .add_yaxis("PC_low", df["PC_low"].to_list(), is_smooth=True,linestyle_opts=opts.LineStyleOpts(color="green"))
+        .add_yaxis("PC_high", df["PC_high"].to_list(), is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="red"))
+        .add_yaxis("B_low", df["B_low"].to_list(), is_smooth=True,linestyle_opts=opts.LineStyleOpts(color="green"))
+        .add_yaxis("B_high", df["B_high"].to_list(), is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="red"))
         .set_series_opts(
                 label_opts=opts.LabelOpts(is_show=False),
         )
