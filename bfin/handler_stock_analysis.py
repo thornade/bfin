@@ -102,8 +102,8 @@ def graph_ticker(last=-1,start="2022-01-01",df_values=None,name=""):
     c2 = (Line(init_opts=opts.InitOpts(width="1500px",height="200px",theme=ThemeType.DARK))
         .add_xaxis(df["Date"].apply(lambda x: str(x).split(" ")[0]).to_list())
         .add_yaxis("PC_High-Close", df["PC_high-close%"], is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="yellow"))
-        .add_yaxis("PC_High-Low", df["PC_high-low%"], is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="orange"))
-        .add_yaxis("RSI", df["RSI"].to_list(), is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="blue_light"))
+        .add_yaxis("PC_High-Low", df["PC_high-low%"], is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="blue_light"))
+        .add_yaxis("RSI", df["RSI"].to_list(), is_smooth=True, linestyle_opts=opts.LineStyleOpts(color="orange"))
         .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
     )
     title2="RSI + PC_High_Close"
