@@ -5,6 +5,8 @@ import json
 import datetime
 import bfin.handler_stock_analysis as hsa
 from dateutil import tz
+import warnings
+warnings.filterwarnings('ignore')
 import pkg_resources
 PAR = tz.gettz('Europe/Paris')
 

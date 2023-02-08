@@ -9,6 +9,8 @@ import numpy as np
 from dateutil import tz
 PAR = tz.gettz('Europe/Paris')
 from . import handler_boursorama as hbourso
+import warnings
+warnings.filterwarnings('ignore')
 
 # compute gain between 2 values
 def gainp(buy,sell):
