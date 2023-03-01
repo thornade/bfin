@@ -331,7 +331,7 @@ def calculate_best_moves(df,PC_bullish=19,PC_bearish=0.1,RSI_bullish=30,RSI_bear
 # Bullish = RSI < 30% && Price Channel HC% > 19%
 # Bearish = RSI > 70% && Price Channel HC% =~ 0%
 # duration_limit = max number of days to keep the stock (with this strategy after 90 days it s rarely usefull to keep it) 90 days = 60 Working days
-def calcbm_HC_hit_HL(df,PC_bullish=19,PC_bearish=0.1,RSI_bullish=30,RSI_bearish=70,duration
+def calcbm_HC_hit_HL(df,PC_bullish=19,PC_bearish=0.1,RSI_bullish=30,RSI_bearish=70,duration_limit=60):
     if ("PC_high-close%" in df.columns) & ("RSI" in df.columns):
         df["diff_PCHC_HL"] = df.apply(lambda x: x["PC_high-low%"] - x["PC_high-close%"],axis=1)
         ldiff=[]
